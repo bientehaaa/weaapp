@@ -10,7 +10,7 @@ const forecast = (latitude, longtitude, callback)=> {
     }else if (body.error) {
       callback('Unable to search Location',undefined)
     }else {
-      callback(undefined, 'The Weather is ' + body.data[0].weather.description + ' .It is currently ' + body.data[0].temp + ' degree out. There is a ' + body.data[0].clouds + '% cloudy.')
+      callback(undefined, 'The Weather is ' + body.data[0].weather.description + ' .It is currently ' + body.data[0].temp + ' degree out. There is a ' + body.data[0].clouds + '% cloudy. The sunrise is ' + body.data[0].sunrise + ' and the sunset will be ' + body.data[0].sunset + ' as well.')
     }
   })
 }
